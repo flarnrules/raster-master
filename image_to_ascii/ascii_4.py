@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 
-ASCII_CHARS = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$" [::-1]
+ASCII_CHARS = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$" # [::-1]
 
 def map_to_ascii(gray_val):
     ascii_val = gray_val * (len(ASCII_CHARS) - 1) // 255
@@ -39,5 +39,5 @@ def image_to_ascii(image_path, new_width=500):
     return ascii_str
 
 if __name__ == "__main__":
-    ascii_str = image_to_ascii("images/ink_nodescape_1.jpg")
+    ascii_str = image_to_ascii("images/ben_and_alison.jpg")
     print(ascii_str)
