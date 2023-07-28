@@ -23,7 +23,7 @@ def image_to_ascii(image_path, new_width=500):
     
     # Use a lighter font instead of the default one
     # Note that you need to have the chosen font installed in your system
-    font = ImageFont.load_default()
+    font = ImageFont.truetype('Arial.tff', 10)
 
     ascii_str = ""
     for y, row in enumerate(pixels):
@@ -39,5 +39,5 @@ def image_to_ascii(image_path, new_width=500):
     return ascii_str
 
 if __name__ == "__main__":
-    ascii_str = image_to_ascii("images/ben_and_alison.jpg")
+    ascii_str = image_to_ascii("images/jean.jpg")
     print(ascii_str)
