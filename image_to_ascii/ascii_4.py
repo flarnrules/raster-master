@@ -1,13 +1,13 @@
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 
-ASCII_CHARS = "@%#*+=-:. "
+ASCII_CHARS = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$" [::-1]
 
 def map_to_ascii(gray_val):
     ascii_val = gray_val * (len(ASCII_CHARS) - 1) // 255
     return ASCII_CHARS[int(ascii_val)]
 
-def image_to_ascii(image_path, new_width=200):
+def image_to_ascii(image_path, new_width=500):
     image = Image.open(image_path)
 
     (old_width, old_height) = image.size
@@ -34,10 +34,10 @@ def image_to_ascii(image_path, new_width=200):
         d.text((0, y*15), "".join(ascii_row), fill=(0, green, blue), font=font)
         # adjust vertical positioning, fill color and font
 
-    ascii_image.save("ascii_output2.png")
+    ascii_image.save("ascii_output.png")
 
     return ascii_str
 
 if __name__ == "__main__":
-    ascii_str = image_to_ascii("images/ben_and_jean.jpg")
+    ascii_str = image_to_ascii("images/ink_nodescape_1.jpg")
     print(ascii_str)
