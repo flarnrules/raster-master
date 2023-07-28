@@ -64,7 +64,7 @@ pip freeze > requirements.txt
 When finished working on the project, deactivate the virtual environment with: `deactivate`
 
 
-## Other Notes on Virtual Environments for This Repo
+### Other Notes on Virtual Environments for This Repo
 
 The virtual environment names for this project are:
 - for the `image_collage` module: `image_collage_env`
@@ -75,3 +75,11 @@ To activate these virtual environments, first source the `setup_env.sh` file loc
 Then, depending on what project we are working on, activate the virtual environment with either:
 - `activate_image_to_ascii` OR
 - `activate_image_collage`
+
+### Quickly Install the Requirements of the Project
+
+When working on another computer, remember to use the following command to install the requirements once the virtual environment is active and once in the proper directory:
+
+```bash
+pip install -r requirements.txt
+```
