@@ -26,26 +26,42 @@ I still don't remember every time how virtual environments work, so I'm going to
 
 ### Setting Up a Virtual Environment
 
-1. Navigate to the project directory in the terminal
-2. Create a new virtual environment inside the directory:
+1. Create virtual environments for each sub project. The current `raster-master` repo has two sub projects:
 
-```bash
-python3 -m venv env
-```
+**For the subdirectory `image collage`:**
+- `cd image_collage`
+- `python3 -m venv image_collage_env`
 
-3. Activate the virtual environment:
+**For the subdirectory `image_to_ascii`:**
+- `cd image_to_ascii`
+- `python3 -m venv image_to_ascii_env`
 
-```bash
-source env/bin/activate
-```
+2. Run the setup_env.sh script that makes activating the environments easier:
+- `cd ..`
+- `bash setup_env.sh`
+
+3. Activate the virtual environment in the subdirectory you want to use:
+- `cd image_to_ascii`
+- `activate_image_to_ascii` 
 
 When the virtual environment is activated, you'll see `(env)` in front of the command prompt.
 
-4. Install the project's dependencies and then create a `requirements.txt` file with:
+4. Install all packages for that repo to get the current venv up to speed.
+
+```bash
+pip install -r requirements.txt
+```
+
+<p style="text-align: center">OR</p>
+
+
+
+4. Install new packages and then update the `requirements.txt` file with:
 
 ```bash
 pip freeze > requirements.txt
 ```
+
 
 
 ### Using the Virtual Environment
