@@ -36,9 +36,9 @@ I still don't remember every time how virtual environments work, so I'm going to
 - `cd image_to_ascii`
 - `python3 -m venv image_to_ascii_env`
 
-2. Run the setup_env.sh script that makes activating the environments easier:
+2. Source the setup_env.sh script that makes activating the environments easier:
 - `cd ..`
-- `bash setup_env.sh`
+- `source setup_env.sh`
 
 3. Activate the virtual environment in the subdirectory you want to use:
 - `cd image_to_ascii`
