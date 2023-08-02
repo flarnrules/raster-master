@@ -34,10 +34,10 @@ def image_to_ascii(image_path, new_width=200):
         d.text((0, y*15), "".join(ascii_row), fill=(0, green, blue), font=font)
         # adjust vertical positioning, fill color and font
 
-    ascii_image.save("ascii_output2.png")
+    ascii_image.save("miracle_mile_ascii.png")
 
     return ascii_str
 
 if __name__ == "__main__":
-    ascii_str = image_to_ascii("images/ben_and_jean.jpg")
+    ascii_str = image_to_ascii("images/miracle_mile.png")
     print(ascii_str)
