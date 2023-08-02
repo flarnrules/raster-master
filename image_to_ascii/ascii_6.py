@@ -5,7 +5,7 @@ import numpy as np
 ASCII_CHARS = "@%#*|\+=-:. "  #[::-1]
 
 FONT_SCALING_FACTORS = {
-    'SpaceMono-Regular.ttf': (7, 15),
+    'SpaceMono-Regular.ttf': (8, 15),
 }
 
 def map_to_ascii(gray_val):
@@ -47,6 +47,7 @@ def image_to_ascii(image_path, output_file_name, font_path, new_width=200):
 if __name__ == "__main__":
     output_file_name = input("Enter output file name (with extension): ")
     font_path = input("Enter font file name (with extension): ")
+    new_width = int(input("Enter new width (default is 200): ") or "200")
     font_path = "fonts/" + font_path 
     scaling_factor = FONT_SCALING_FACTORS.get(os.path.basename(font_path), (6, 15)) # Use scaling factor for chosen font, or default of 6, 15.
     ascii_str = image_to_ascii("images/MV5BMjE0MTUyMzQ5NF5BMl5BanBnXkFtZTYwNzY3NTg4._V1_.jpg", output_file_name, font_path)
