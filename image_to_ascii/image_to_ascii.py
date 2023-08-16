@@ -37,4 +37,4 @@ def image_to_ascii(image_path):
     return ascii_img
 
 # Run the function and print the result
-print(image_to_ascii("images/ink_nodescape_1.jpg"))
+print(image_to_ascii("images/knightriders.png"))
