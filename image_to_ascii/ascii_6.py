@@ -50,5 +50,5 @@ if __name__ == "__main__":
     new_width = int(input("Enter new width (default is 200): ") or "200")
     font_path = "fonts/" + font_path 
     scaling_factor = FONT_SCALING_FACTORS.get(os.path.basename(font_path), (6, 15)) # Use scaling factor for chosen font, or default of 6, 15.
-    ascii_str = image_to_ascii("images/crabbear-better.png", output_file_name, font_path)
+    ascii_str = image_to_ascii("images/knightriders.png", output_file_name, font_path)
     print(ascii_str)

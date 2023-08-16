@@ -18,7 +18,7 @@ def image_to_ascii(image_path, new_width=100):
     pixels = np.array(image)
 
     # Create a new white image with dimensions calculated for ASCII characters
-    ascii_image = Image.new('L', (new_width * 12, new_height * 15), color=255)  # adjust dimensions according to your font size
+    ascii_image = Image.new('L', (new_width * 12, new_height * 15), color=('white'))  # adjust dimensions according to your font size
     d = ImageDraw.Draw(ascii_image)
     font = ImageFont.load_default()
 
